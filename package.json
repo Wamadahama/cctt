@@ -1,0 +1,28 @@
+{
+  "name": "crux",
+  "version": "1.0.0",
+  "description": "A desktop Gist uploader",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/electron-quick-start.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
+  ],
+  "author": "Elijah Ellis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wamadahama/crux.git"
+  },
+  "homepage": "https://github.com/wamadahama/grux#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}

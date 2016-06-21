@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Crux</title>
+    <link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" src="js/index.js"></script>
+  </head>
+  <body>
+      <label for="filename">Filename:</label>
+      <input type="text" class="inputs" id="filename-box" value="">
+      <hr>
+
+      <textarea id="gist-box" class="inputs" rows="8" cols="40"></textarea>
+
+      <button type="button" class="inputs" name="submit" id="SubmitButton">Submit</button>
+
+      <a href="" id="link-to-gist" class="inputs"></a>
+  </body>
+
+  <script>
+    // You can also require other files to run in this process
+    require('../renderer.js')
+  </script>
+</html>
