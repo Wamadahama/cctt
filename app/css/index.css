@@ -4,6 +4,76 @@ body{
   -webkit-user-select: none;
 }
 
+@font-face {
+  font-family: "Open Sans";
+  src:url("../fonts/OpenSans-Regular.ttf");
+}
+
 .inputs {
   -webkit-app-region: no-drag;
+}
+
+.submitButton {
+  text-align: right;
+  float:right;
+  color: #111;
+  background-color: #fff;
+  border: solid 1px #636b46 !important;
+}
+
+.submitButton:hover{
+  color: #fff;
+  background-color: #636b46;
+}
+
+.submitButton:focus{
+  background-color: #373f27;
+}
+
+.flex {
+  padding: 15px;
+}
+
+.menu-btns{
+  float: right;
+  text-align: right;
+  color: #111;
+}
+
+.pop {
+  padding-top: 10vh;
+}
+
+.navbar{
+  height: 10px;
+}
+
+.show {
+  -webkit-app-region: drag;
+  background-color: #CDA34F;
+}
+
+.brand{
+  font-family: 'Open Sans', sans-serif;;
+  color: #fffff8 !important;
+}
+
+.x-button {
+  -webkit-app-region: no-drag;
+  margin: .3em .3em .3em .3em !important;
+  float: right;
+  color: #fffff8 !important;
+}
+
+.vertical-center {
+  position: absolute;
+  top 50%;
+  transform: translateY(-50%);
+}
+
+hr.line {
+  border: 0;
+  height: 1px;
+  background: #dddfd4;
+  background-image: linear-gradient(to right, #ccc,#dddfd4, #ccc);
 }

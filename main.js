@@ -1,4 +1,5 @@
 const electron = require('electron')
+const remote = electron.remote
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -11,8 +12,9 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-        width: 800,
-        height: 300,
+        width: 500,
+        height: 500,
+        frame: false
   })
 
   // and load the index.html of the app.
@@ -51,3 +53,8 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+const ipc = electron.ipcMain;
+
+ipc.on('close-main-window', function () {
+    app.quit();
+});

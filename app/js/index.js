@@ -1,9 +1,9 @@
 'use strict';
 
+// Logic for reading user input
 window.onload = function() {
 
   let open = require("open");
-
   let submitButton = document.querySelector('#SubmitButton');
 
   submitButton.addEventListener('click', function() {
@@ -26,7 +26,7 @@ window.onload = function() {
     }
   });
 }
-
+// Logic for uploading to github
   let GitHubApi = require("github");
 
   let github = new GitHubApi({
@@ -35,18 +35,27 @@ window.onload = function() {
     host: "api.github.com",
   });
 
+
+  const {shell} = require('electron');
+
   const uploadGist = (title, text)  => {
     let files = {};
     files[title] = {"content": text};
 
     let request = {
       "public": true,
-      "description": "test",
       "files": files
     }
 
     github.gists.create(request, function(err, res){
         let url = res['html_url'];
-        open(url);
+        shell.openExternal(url)
     });
 }
+
+const ipc = require('electron').ipcRender;
+let xButton = document.querySelector("#close");
+
+xButton.addEventListener('click', function(){
+  ipc.send('close-main-window');
+});

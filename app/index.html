@@ -5,17 +5,41 @@
     <title>Crux</title>
     <link rel="stylesheet" href="css/index.css" media="screen" title="no title" charset="utf-8">
     <script type="text/javascript" src="js/index.js"></script>
+    <link rel="stylesheet" href="css/picnic.min.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-      <label for="filename">Filename:</label>
-      <input type="text" class="inputs" id="filename-box" value="">
-      <hr>
+    <div class="flex one">
+<!--
+      <nav>
+        <div class="navbar">
+          <a class="menu-btns">Exit</a>
+          <a class="menu-btns">Expand</a>
+        </div>
+      </nav> -->
 
-      <textarea id="gist-box" class="inputs" rows="8" cols="40"></textarea>
+      <nav class="show">
+        <a href="#" class="brand">
+          <h2 class="vertical-center">Ether: Gist Uploader</h2>
+        </a>
+        <!-- responsive-->
+        <label class="pseudo button x-button" id="close">X</label>
 
-      <button type="button" class="inputs" name="submit" id="SubmitButton">Submit</button>
+      </nav>
 
-      <a href="" id="link-to-gist" class="inputs"></a>
+      <div class="pop">
+        <input type="text" class="inputs" id="filename-box" value="" placeholder="Filename with extension">
+        <hr class="line">
+      </div>
+
+      <div class="">
+        <textarea id="gist-box" class="inputs" rows="8" cols="40" placeholder="File text"></textarea>
+      </div>
+
+      <div class="">
+        <button type="button" class="submitButton" name="submit" id="SubmitButton">Submit</button>
+      </div>
+    </div>
+
   </body>
 
   <script>
