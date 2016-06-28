@@ -1,5 +1,5 @@
 {
-  "name": "crux",
+  "name": "cctt",
   "version": "1.0.0",
   "description": "A desktop Gist uploader",
   "main": "main.js",
@@ -8,21 +8,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/wamadahama/cctt.git"
   },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial"
+    "Gist",
+    "github",
+    "Desktop application"
   ],
   "author": "Elijah Ellis",
-  "license": "MIT",
+  "license": "CC0",
   "bugs": {
-    "url": "https://github.com/wamadahama/crux.git"
+    "url": "https://github.com/wamadahama/cctt.git"
   },
-  "homepage": "https://github.com/wamadahama/grux#readme",
+  "homepage": "https://github.com/wamadahama/cctt#readme",
   "devDependencies": {
+    "electron-packager": "^7.1.0",
     "electron-prebuilt": "^1.2.0"
   }
 }

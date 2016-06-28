@@ -2,12 +2,20 @@
 
 // Logic for reading user input
 window.onload = function() {
+  // Set up exit button
+  const {ipcRenderer} = require('electron');
+
+  let xButton = document.querySelector(".x-button");
+
+   xButton.addEventListener('click', function(){
+     ipcRenderer.sendSync('close-main-window');
+   });
 
   let open = require("open");
+
   let submitButton = document.querySelector('#SubmitButton');
 
   submitButton.addEventListener('click', function() {
-
 
     let title = (document.querySelector("#filename-box").value);
     let text = (document.querySelector("#gist-box").value);
@@ -52,10 +60,3 @@ window.onload = function() {
         shell.openExternal(url)
     });
 }
-
-const ipc = require('electron').ipcRender;
-let xButton = document.querySelector("#close");
-
-xButton.addEventListener('click', function(){
-  ipc.send('close-main-window');
-});
