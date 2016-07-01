@@ -37,14 +37,7 @@ Output
     mv cctt-linux-64bit /usr/local/
     vim .bashrc
   ```
-
-  But I use emacs?
-  ```
-    apt-get remove emacs
-    apt-get install vim
-  ```
-  
-  and add ```bash export PATH=$PATH:/usr/local/cctt `` to your .bashrc
+  and add ``` export PATH=$PATH:/usr/local/cctt ``` to your .bashrc
 
 ### Building from source
 Make sure you have node, npm, and Electron
