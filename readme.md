@@ -18,12 +18,33 @@ Output
 
 ## Installation
 
-### Pre existing binaries:
+### From Binaries
 
+#### Windows Install
   - Go to releases page
   - Look for your platform
-    - i.e Windows = cctt-win32-64bit.tar.gz
-  - Extract and run
+    - i.e cctt-win32-64bit.tar.gz
+  - Extract to program files
+  - Create shortcut of exe
+
+#### Linux Install
+  - Go to releases page
+  - Look for your platform
+    - i.e cctt-linux-64bit.tar.gz
+
+  ```
+    tar xvzf ctt-linux-64bit.tar.gz
+    mv cctt-linux-64bit /usr/local/
+    vim .bashrc
+  ```
+
+  But I use emacs?
+  ```
+    apt-get remove emacs
+    apt-get install vim
+  ```
+  
+  and add ```bash export PATH=$PATH:/usr/local/cctt `` to your .bashrc
 
 ### Building from source
 Make sure you have node, npm, and Electron
